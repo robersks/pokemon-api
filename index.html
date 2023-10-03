@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon API</title>
-    
-   
-
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui@4/material-ui.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-
     <script defer src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-    <input  id="myPikachu" value="Pikachu" type="submit"> 
-    <!-- <button id="loadPokemon">Cargar Pokémones</button> -->
-    <div id="pokemonList">
-    </div>    
+    <header>
+        <h1>Pokémon API</h1>
+        <img src="img/pokeball.png" alt="Poké Ball">
+    </header>
+    <button id="scrollToTopButton" class="scroll-button">Subir</button>
+    <button id="scrollToBottomButton" class="scroll-button">Bajar</button>
+    
+    <div class="container">
+        <!-- <button id="myPikachu" class="poke-button">¡Pikachu!</button> -->
+        <!-- <button id="loadPokemon">Cargar Pokémones</button> -->
+        <div id="pokemonList" class="poke-grid">
+        </div>
+    </div>
 </body>
-</html> 
+</html>

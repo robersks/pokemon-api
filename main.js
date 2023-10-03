@@ -7,10 +7,9 @@ async function showPokemonStats(pokemonName) {
 
         // Crear el contenido HTML para el modal
         let img = pokemonData.sprites.front_default;
-        let defaultImg = ""; 
+        let defaultImg = "";
         let modalContent = `
-            <h2>${pokemonData.name}</h2>
-            <img src="${img || defaultImg}" alt="${pokemonData.name}">
+            <img src="${img || defaultImg}"  alt="${pokemonData.name}"><br><br>
             ${pokemonData.stats.map((data) => `
                 <input 
                     type="range" 
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         let pokemonList = document.querySelector("#pokemonList");
         let apiUrl = "https://pokeapi.co/api/v2/pokemon";
         let offset = 0;
-        let limit = 100; // Cantidad de Pokémon a cargar en cada página
+        let limit = 500; // Cantidad de Pokémon a cargar en cada página
 
         // Hacer una solicitud a la API para obtener una página de Pokémon
         let response = await fetch(`${apiUrl}?offset=${offset}&limit=${limit}`);
@@ -69,4 +68,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (error) {
         console.error("Error al cargar Pokémon:", error);
     }
+});
+
+//------------------------------
+// Función para desplazarse al final de la página al hacer clic en el botón
+document.querySelector("#scrollToBottomButton").addEventListener("click", () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth" // Desplazamiento suave
+    });
+});
+
+// Función para desplazarse hacia arriba de la página al hacer clic en el botón
+document.querySelector("#scrollToTopButton").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Desplazamiento suave
+    });
 });

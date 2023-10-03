@@ -1,8 +1,125 @@
-/* Estilo para los Pokémon */
-.pokemon-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #ef5350;
+    color: #fff;
     text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.poke-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.poke-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilo para los Pokémon en una cuadrícula */
+.poke-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.pokemon-card {
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pokemon-card img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+/* Estilo para la imagen de Poké Ball en el encabezado */
+header img {
+    max-width: 50px;
+    margin-top: 10px;
+}
+
+/* Estilo para los botones flotantes */
+.scroll-button {
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 1%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    /*display: none;*/ /* Inicialmente ocultos */
+    transition: background-color 0.3s ease; /* Efecto de transición para el cambio de color */
+}
+
+.scroll-button:hover {
+    background-color: #f44336;
+}
+
+/* Estilo para el botón Ir al Final */
+#scrollToBottomButton {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Estilo para el botón Ir hacia arriba */
+#scrollToTopButton {
+    bottom: 70px; /* Ajusta la posición vertical */
+    right: 20px;
+}
+
+/* Media Query para hacer responsive */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .poke-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
