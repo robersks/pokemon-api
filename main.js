@@ -41,7 +41,9 @@ let apiUrl = "https://pokeapi.co/api/v2/pokemon";
 let offset = 0;
 let limit = 100; // Cantidad de Pokémon a cargar en cada página
 
-loadButton.addEventListener("click", async () => {
+//loadButton.addEventListener("click", async () => {
+document.addEventListener("DOMContentLoaded", async () => {
+
     try {
         // Hacer una solicitud a la API para obtener una página de Pokémon
         let response = await fetch(`${apiUrl}?offset=${offset}&limit=${limit}`);
