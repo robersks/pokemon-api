@@ -7,6 +7,9 @@ Bienvenido a la página web de Pokémon, donde puedes explorar información sobr
 ![Imagen 1](img/img1.png)
 *Interfaz de usuario*
 
+![Imagen 1](img/img2.png)
+*Estadísticas mas precisas*
+
 ## Características
 
 - Información detallada sobre Pokémon.
